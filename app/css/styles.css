@@ -1,0 +1,167 @@
+h1, h2, h3, h4 {
+  font-family: Overpass;
+  font-weight: 600;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3, h4 {
+  color: #1f3f5b;
+  font-size: 1.5em;
+  margin-bottom: 1.6em;
+}
+
+h4 {
+  margin: 1.6em 2.2em;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+a {
+  color: none;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+
+ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+ul > li {
+  margin: 1.6em 0;
+}
+ul ul > li {
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-family: Overpass;
+  font-weight: 300;
+  color: #4b5862;
+  margin: 1.2em 2.4em;
+  font-size: 1em;
+  line-height: 28px;
+}
+
+body {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  background-color: linear-gradient(#2c2d3f, #3f4164);
+}
+body header {
+  color: white;
+  background-image: url("../img/bg-pattern-intro-mobile.svg"), linear-gradient(#ff8f70, #ff3d54);
+  background-size: 350%;
+  background-repeat: no-repeat;
+  background-position: 34% 31%;
+  border-radius: 0 0 0 65px;
+  padding-bottom: 9em;
+}
+body header nav {
+  padding: 0 25px;
+  padding-top: 55px;
+}
+body header nav .nav {
+  display: flex;
+  justify-content: space-between;
+}
+body header nav .nav a {
+  display: flex;
+  align-content: center;
+}
+body header nav .nav a .icon {
+  object-fit: none;
+}
+body header nav #hide {
+  display: none;
+}
+body header .hero {
+  text-align: center;
+  margin: 0 1.4em;
+  margin-top: 25%;
+}
+body header .hero p {
+  color: white;
+}
+body header .hero .button {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3.6em;
+}
+body header .hero .button a {
+  display: block;
+  font-family: Ubuntu;
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px;
+}
+body header .hero .button #cta {
+  background-color: white;
+  color: #ff525d;
+}
+body .platform {
+  margin-top: 7em;
+}
+body .infrastructure {
+  position: relative;
+  background-image: url("../img/bg-pattern-circles.svg");
+  background-color: #3b3c5b;
+  background-repeat: no-repeat;
+  background-position: 50% -1950%;
+  background-size: 160%;
+  color: white;
+  border-radius: 0 80px 0 80px;
+  padding-top: 50%;
+  padding-bottom: 25%;
+  margin-top: 70%;
+}
+body .infrastructure h3, body .infrastructure p {
+  color: white;
+}
+body .infrastructure img {
+  position: absolute;
+  top: -30%;
+}
+body .free {
+  margin-top: 15%;
+  margin-bottom: 25%;
+}
+body footer {
+  border-radius: 0 80px 0 0;
+  margin: 0;
+  background-color: #25252d;
+  color: white;
+  padding: 1.6em;
+  padding-bottom: 4.6em;
+}
+body footer .logo-footer {
+  width: 30%;
+  margin: auto;
+  padding: 1.6em 0;
+}
+body .attribution {
+  background-color: #25252d;
+  color: white;
+  text-align: center;
+}
