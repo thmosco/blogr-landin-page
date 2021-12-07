@@ -61,6 +61,22 @@ p {
   line-height: 28px;
 }
 
+.rotate img {
+  transform: rotate(180deg);
+}
+
+.sub-menu-open {
+  opacity: 1 !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0 !important;
+  }
+  to {
+    opacity: 1 !important;
+  }
+}
 body {
   font-family: Ubuntu;
   font-weight: 400;
@@ -92,8 +108,50 @@ body header nav .nav a {
 body header nav .nav a .icon {
   object-fit: none;
 }
-body header nav #hide {
+body header #menu {
   display: none;
+  position: absolute;
+  background-color: white;
+  width: 85%;
+  top: 125px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+}
+body header #menu img {
+  width: 3%;
+  margin-left: 5px;
+}
+body header #menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4b5862;
+}
+body header #menu ul > ul {
+  opacity: 0;
+  display: none;
+  background-color: #efeff1;
+  margin: 1em;
+  border-radius: 5px;
+  padding: 1em 0;
+  overflow: hidden;
+  animation: all 5s;
+}
+body header #menu .connexion {
+  border-top: 1px solid #e4e4e4;
+  padding: 1.8em;
+  font-weight: 600;
+}
+body header #menu .connexion #sign-up {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid linear-gradient(0.25turn, #ff8f70, #ff3d54);
+  background: linear-gradient(0.25turn, #ff8f70, #ff3d54);
+  color: white;
+  border-radius: 20px;
+  margin-top: 1.4em;
 }
 body header .hero {
   text-align: center;

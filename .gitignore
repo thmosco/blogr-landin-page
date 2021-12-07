@@ -15,4 +15,7 @@
 .DS_Store
 .prettierignore
 
-.node_modules
+node_modules
+design
+dist
+README-template.md
