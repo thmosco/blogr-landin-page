@@ -50,6 +50,7 @@ ul ul > li {
 
 img {
   width: 100%;
+  max-width: 1100px;
 }
 
 p {
@@ -69,20 +70,12 @@ p {
   opacity: 1 !important;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0 !important;
-  }
-  to {
-    opacity: 1 !important;
-  }
-}
 body {
   font-family: Ubuntu;
   font-weight: 400;
   font-size: 16px;
   margin: 0;
-  background-color: linear-gradient(#2c2d3f, #3f4164);
+  overflow-x: hidden;
 }
 body header {
   color: white;
@@ -92,9 +85,15 @@ body header {
   background-position: 34% 31%;
   border-radius: 0 0 0 65px;
   padding-bottom: 9em;
+  padding: 0 5%;
+  min-height: 600px;
+}
+@media (min-width: 875px) {
+  body header {
+    padding: 0 10%;
+  }
 }
 body header nav {
-  padding: 0 25px;
   padding-top: 55px;
 }
 body header nav .nav {
@@ -158,6 +157,27 @@ body header .hero {
   margin: 0 1.4em;
   margin-top: 25%;
 }
+@media (min-width: 875px) {
+  body header .hero {
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  body header .hero h2 {
+    font-size: 3.4em;
+    margin: 0;
+  }
+  body header .hero p {
+    font-size: 1.2em;
+  }
+  body header .hero .button {
+    margin: auto;
+  }
+  body header .hero .button #cta {
+    margin-right: 15px;
+  }
+}
 body header .hero p {
   color: white;
 }
@@ -181,29 +201,119 @@ body header .hero .button #cta {
 body .platform {
   margin-top: 7em;
 }
+@media (min-width: 875px) {
+  body .platform .info {
+    margin-left: 10%;
+  }
+  body .platform .info > div:first-child {
+    margin-bottom: 70px;
+  }
+  body .platform .img {
+    width: 200%;
+  }
+  body .platform .img img {
+    position: absolute;
+    width: 60%;
+    top: 740px;
+  }
+  body .platform > div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  body .platform h3 {
+    font-size: 2.6em;
+  }
+  body .platform h4, body .platform p {
+    text-align: left;
+    margin-left: 0;
+  }
+}
 body .infrastructure {
   position: relative;
   background-image: url("../img/bg-pattern-circles.svg");
   background-color: #3b3c5b;
   background-repeat: no-repeat;
-  background-position: 50% -1950%;
-  background-size: 160%;
+  background-position: -110px -250px;
+  background-size: 600px;
   color: white;
   border-radius: 0 80px 0 80px;
   padding-top: 50%;
   padding-bottom: 25%;
-  margin-top: 70%;
+  margin-top: 60%;
 }
-body .infrastructure h3, body .infrastructure p {
+@media (min-width: 750px) {
+  body .infrastructure {
+    margin-top: 20%;
+    padding: 0;
+    position: relative;
+  }
+  body .infrastructure > .fakestructure {
+    display: flex;
+    justify-content: center;
+    padding: 6em 0;
+  }
+  body .infrastructure > .fakestructure > div {
+    flex: 1;
+  }
+}
+body .infrastructure h2, body .infrastructure p {
   color: white;
 }
+@media (min-width: 750px) {
+  body .infrastructure h2, body .infrastructure p {
+    display: flex;
+    align-content: center;
+    text-align: left;
+    margin-left: 0;
+  }
+}
 body .infrastructure img {
+  max-width: 650px;
   position: absolute;
   top: -30%;
 }
+@media (min-width: 450px) {
+  body .infrastructure img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media (min-width: 750px) {
+  body .infrastructure img {
+    left: 7.5%;
+    top: -50px;
+    position: absolute;
+    width: 40%;
+    margin-left: 0;
+  }
+}
 body .free {
   margin-top: 15%;
+  margin-right: 5%;
   margin-bottom: 25%;
+}
+@media (min-width: 875px) {
+  body .free {
+    display: flex;
+    margin-bottom: 15%;
+  }
+  body .free .img {
+    position: relative;
+    width: 200%;
+  }
+  body .free .img img {
+    position: absolute;
+    width: 140%;
+    left: -250px;
+    top: -120px;
+  }
+  body .free .info > div:first-child {
+    margin-bottom: 70px;
+  }
+  body .free .info h4, body .free .info p {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 body footer {
   border-radius: 0 80px 0 0;
@@ -217,6 +327,27 @@ body footer .logo-footer {
   width: 30%;
   margin: auto;
   padding: 1.6em 0;
+}
+@media (min-width: 875px) {
+  body footer {
+    display: flex;
+  }
+  body footer > ul {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  body footer > ul li {
+    text-align: left;
+  }
+  body footer .logo-footer {
+    margin: 0;
+    padding-right: 50px;
+  }
+  body footer .logo-footer img {
+    margin: 0 auto;
+    width: 30%;
+  }
 }
 body .attribution {
   background-color: #25252d;

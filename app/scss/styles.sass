@@ -51,6 +51,7 @@ ul
 
 img
     width: 100%
+    max-width: 1100px
 p
     font-family: Overpass
     font-weight: 300
@@ -65,12 +66,6 @@ p
 .sub-menu-open
     opacity: 1!important
 
-@keyframes fadeIn
-    from
-        opacity: 0!important
-    to
-        opacity: 1!important
-
 
 //page css
 
@@ -79,7 +74,8 @@ body
     font-weight: 400
     font-size: 16px
     margin: 0
-    background-color: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))
+    overflow-x: hidden
+    //background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))
 
     header
         color: $txt-color
@@ -90,8 +86,11 @@ body
             position: 34% 31%
         border-radius: 0 0 0 65px
         padding-bottom: 9em
+        padding: 0 5%
+        min-height: 600px
+        @media (min-width: 875px)
+            padding: 0 10%
         nav
-            padding: 0 25px
             padding-top: 55px
             .nav
                 display: flex
@@ -147,6 +146,21 @@ body
             text-align: center
             margin: 0 1.4em
             margin-top: 25%
+            @media (min-width: 875px)
+                padding: 10% 0
+                display: flex
+                flex-direction: column
+                margin-top: 0
+                h2
+                    font-size: 3.4em
+                    margin: 0
+                p
+                    font-size: 1.2em
+                .button
+                    margin: auto
+                    #cta
+                        margin-right: 15px
+
             p
                 color: white
             .button
@@ -165,6 +179,27 @@ body
                     color: hsl(356, 100%, 66%)
     .platform
         margin-top: 7em
+        @media (min-width: 875px)
+
+            .info
+                margin-left: 10%
+                > div:first-child
+                    margin-bottom: 70px
+            .img
+                width: 200%
+                img
+                    position: absolute
+                    width: 60%
+                    top: 740px
+            > div
+                display: flex
+                flex-direction: row-reverse
+            h3
+                font-size: 2.6em
+            h4, p
+                text-align: left
+                margin-left: 0
+
         
         
     .infrastructure
@@ -173,21 +208,66 @@ body
             image: url('../img/bg-pattern-circles.svg')
             color: #3b3c5b
             repeat: no-repeat
-            position: 50% -1950%
-            size: 160%
+            position: -110px -250px
+            size: 600px
         color: white
         border-radius: 0 80px 0 80px
         padding-top: 50%
         padding-bottom: 25%
-        margin-top: 70%
-        h3, p
+        margin-top: 60%
+        @media (min-width: 750px)
+            margin-top: 20%
+            padding: 0
+            position: relative
+            > .fakestructure
+                display: flex
+                justify-content: center
+                padding: 6em 0 
+                > div
+                    flex: 1
+        h2, p
             color: white
+            @media (min-width: 750px)
+                display: flex
+                align-content: center 
+                text-align: left
+                margin-left: 0
         img
+            max-width: 650px
             position: absolute
             top: -30%
+            @media (min-width: 450px)
+                width: 80%
+                margin-left: 10%
+            @media (min-width: 750px)
+                left: 7.5%
+                top: -50px
+                position: absolute
+                width: 40%
+                margin-left: 0
+            
     .free
         margin-top: 15%
+        margin-right: 5%
         margin-bottom: 25%
+        @media (min-width: 875px)
+            display: flex
+            margin-bottom: 15%
+            .img
+                position: relative
+                width: 200%
+                
+                img
+                    position: absolute
+                    width: 140%
+                    left: -250px
+                    top: -120px
+            .info
+                > div:first-child
+                    margin-bottom: 70px
+                h4, p
+                    text-align: left
+                    margin-left: 0
 
 
 
@@ -202,6 +282,20 @@ body
             width: 30%
             margin: auto
             padding: 1.6em 0 
+        @media (min-width: 875px)
+            display: flex
+            > ul
+                display: flex
+                flex: 1
+                flex-direction: column
+                li
+                    text-align: left
+            .logo-footer
+                margin: 0 
+                padding-right: 50px
+                img
+                    margin: 0 auto
+                    width: 30%
 
     .attribution
         background-color: $footer-bg
