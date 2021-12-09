@@ -119,7 +119,7 @@ body header #menu {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 body header #menu img {
-  width: 3%;
+  width: 10px;
   margin-left: 5px;
 }
 body header #menu a {
@@ -328,6 +328,9 @@ body footer .logo-footer {
   margin: auto;
   padding: 1.6em 0;
 }
+body footer a {
+  color: white;
+}
 @media (min-width: 875px) {
   body footer {
     display: flex;
@@ -353,4 +356,9 @@ body .attribution {
   background-color: #25252d;
   color: white;
   text-align: center;
+  padding-bottom: 20px;
+}
+body .attribution a {
+  color: white;
+  text-decoration: underline;
 }
