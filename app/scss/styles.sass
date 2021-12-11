@@ -113,7 +113,11 @@ body
             img
                 width: 10px
                 margin-left: 5px
-            
+                content: url("../img/icon-arrow-dark.svg")
+            #light
+                display: none
+            #dark
+                display: block
             a
                 display: flex
                 justify-content: center
@@ -128,7 +132,6 @@ body
                 padding: 1em 0
                 overflow: hidden
                 animation: all 5s             
-
             .connexion
                 border-top: 1px solid #e4e4e4
                 padding: 1.8em
@@ -141,6 +144,56 @@ body
                     color: white
                     border-radius: 20px
                     margin-top: 1.4em
+                    &:hover
+                            background: #ff7b86
+        @media (min-width: 850px)
+            #menu
+                display: flex
+                justify-content: space-between
+                position: unset
+                background-color: inherit
+                box-shadow: none
+                align-items: center
+                a
+                    color: white
+                img
+                    content: url("../img/icon-arrow-light.svg")
+                #light
+                    display: block
+                    margin-left: 10px
+                #dark
+                    display: none
+                ul
+                    position: relative
+                ul > li > a:hover
+                    text-decoration: underline
+                ul > ul
+                    position: absolute
+                    background-color: white
+                    padding: 26px
+                    min-width: 170px
+                    margin: 0
+                    left: -26px
+                    li a
+                        color: black
+                        text-align: left
+                        display: block
+                        margin-bottom: 3px
+                        &:hover
+                            font-weight: 600
+                            text-decoration: none
+                .section, .connexion
+                    display: flex
+                    column-gap: 40px
+                .connexion
+                    align-items: center
+                    border: 0 
+                    padding: 0
+                    #sign-up
+                        margin-top: 0
+            #menu-state
+                    display: none
+        
 
         .hero
             text-align: center
@@ -174,9 +227,16 @@ body
                     border: 2px solid white
                     border-radius: 25px
                     padding: 10px
+                    &:hover
+                        color: #ff7b86
+                        background-color: white 
                 #cta
                     background-color: white
                     color: hsl(356, 100%, 66%)
+                    &:hover
+                        background-color: #ff7b86
+                        color: white
+                        border-color: #ff7b86
     .platform
         margin-top: 7em
         @media (min-width: 875px)

@@ -57,46 +57,49 @@
     <nav>
 
       <div class="nav">
-        <a href="#"><img class="icon" src="img/logo.svg" alt="logo Blogr" /></a>
-        <a href="#" onclick="openMenu()"><img class="icon" id="menu-state" src="img/icon-hamburger.svg" alt="icone hamburger"></a>
+        <a href="#"><img class="icon" src="img/logo.svg" alt="logo Blogr" /></a> 
+        <div id="menu">
+          <div class="section">
+          <ul id="Product">
+            <li ><a href="#" onclick="openAccordion('Product')">Product<img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </ul>
+
+          <ul id="Company">
+            <li><a href="#" onclick="openAccordion('Company')">Company<img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </ul>
+
+          <ul id="Connect">
+            <li><a href="#" onclick="openAccordion('Connect')">Connect <img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </ul>
       </div>
-
-      <div id="menu">
-        <ul id="Product">
-          <li ><a href="#" onclick="openAccordion('Product')">Product<img src="img/icon-arrow-dark.svg"/></a></li>
-          <ul>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Marketplace</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Integrations</a></li>
-          </ul>
-        </ul>
-
-        <ul id="Company">
-          <li><a href="#" onclick="openAccordion('Company')">Company<img src="img/icon-arrow-dark.svg"/></a></a></li>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </ul>
-
-        <ul id="Connect">
-          <li><a href="#" onclick="openAccordion('Connect')">Connect <img src="img/icon-arrow-dark.svg"/></a></a></li>
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </ul>
 
         <div class="connexion">
           <a href="">Login</a>
           <a id="sign-up" href="">Sign Up</a>
         </div>
       </div>
+        <a href="#" onclick="openMenu()"><img class="icon" id="menu-state" src="img/icon-hamburger.svg" alt="icone hamburger"></a>
+      </div>
+
+     
     </nav>
     <div class="hero">
       <h2>A modern publishing platform</h2>

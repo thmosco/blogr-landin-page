@@ -121,6 +121,13 @@ body header #menu {
 body header #menu img {
   width: 10px;
   margin-left: 5px;
+  content: url("../img/icon-arrow-dark.svg");
+}
+body header #menu #light {
+  display: none;
+}
+body header #menu #dark {
+  display: block;
 }
 body header #menu a {
   display: flex;
@@ -151,6 +158,71 @@ body header #menu .connexion #sign-up {
   color: white;
   border-radius: 20px;
   margin-top: 1.4em;
+}
+body header #menu .connexion #sign-up:hover {
+  background: #ff7b86;
+}
+@media (min-width: 850px) {
+  body header #menu {
+    display: flex;
+    justify-content: space-between;
+    position: unset;
+    background-color: inherit;
+    box-shadow: none;
+    align-items: center;
+  }
+  body header #menu a {
+    color: white;
+  }
+  body header #menu img {
+    content: url("../img/icon-arrow-light.svg");
+  }
+  body header #menu #light {
+    display: block;
+    margin-left: 10px;
+  }
+  body header #menu #dark {
+    display: none;
+  }
+  body header #menu ul {
+    position: relative;
+  }
+  body header #menu ul > li > a:hover {
+    text-decoration: underline;
+  }
+  body header #menu ul > ul {
+    position: absolute;
+    background-color: white;
+    padding: 26px;
+    min-width: 170px;
+    margin: 0;
+    left: -26px;
+  }
+  body header #menu ul > ul li a {
+    color: black;
+    text-align: left;
+    display: block;
+    margin-bottom: 3px;
+  }
+  body header #menu ul > ul li a:hover {
+    font-weight: 600;
+    text-decoration: none;
+  }
+  body header #menu .section, body header #menu .connexion {
+    display: flex;
+    column-gap: 40px;
+  }
+  body header #menu .connexion {
+    align-items: center;
+    border: 0;
+    padding: 0;
+  }
+  body header #menu .connexion #sign-up {
+    margin-top: 0;
+  }
+  body header #menu-state {
+    display: none;
+  }
 }
 body header .hero {
   text-align: center;
@@ -194,9 +266,18 @@ body header .hero .button a {
   border-radius: 25px;
   padding: 10px;
 }
+body header .hero .button a:hover {
+  color: #ff7b86;
+  background-color: white;
+}
 body header .hero .button #cta {
   background-color: white;
   color: #ff525d;
+}
+body header .hero .button #cta:hover {
+  background-color: #ff7b86;
+  color: white;
+  border-color: #ff7b86;
 }
 body .platform {
   margin-top: 7em;
