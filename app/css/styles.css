@@ -150,6 +150,9 @@ body header #menu .connexion {
   padding: 1.8em;
   font-weight: 600;
 }
+body header #menu .connexion a:hover {
+  text-decoration: underline;
+}
 body header #menu .connexion #sign-up {
   display: inline-block;
   padding: 10px 30px;
@@ -161,6 +164,7 @@ body header #menu .connexion #sign-up {
 }
 body header #menu .connexion #sign-up:hover {
   background: #ff7b86;
+  text-decoration: none;
 }
 @media (min-width: 850px) {
   body header #menu {
@@ -412,6 +416,9 @@ body footer .logo-footer {
 body footer a {
   color: white;
 }
+body footer a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 875px) {
   body footer {
     display: flex;
@@ -442,4 +449,7 @@ body .attribution {
 body .attribution a {
   color: white;
   text-decoration: underline;
+}
+body .attribution a:hover {
+  text-decoration: none;
 }
