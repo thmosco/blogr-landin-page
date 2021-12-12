@@ -25,10 +25,6 @@ h4
     margin: 1.6em 2.2em
     margin-bottom: 0
 
-p
-    text-align: center
-    font-size: 1.2em
-
 a
     color: none
     text-decoration: none
@@ -55,10 +51,12 @@ img
 p
     font-family: Overpass
     font-weight: 300
+    text-align: center
+    font-size: 1.2em
     color: hsl(207, 13%, 34%)
     margin: 1.2em 2.4em
     font-size: 1em
-    line-height: 28px
+    line-height: 36px
 
 .rotate img    
     transform: rotate(180deg)
@@ -75,6 +73,8 @@ body
     font-size: 16px
     margin: 0
     overflow-x: hidden
+    max-width: 1600px
+    margin: auto
     //background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))
 
     header
@@ -114,9 +114,9 @@ body
                 width: 10px
                 margin-left: 5px
                 content: url("../img/icon-arrow-dark.svg")
-            #light
+            .light
                 display: none
-            #dark
+            .dark
                 display: block
             a
                 display: flex
@@ -161,10 +161,10 @@ body
                     color: white
                 img
                     content: url("../img/icon-arrow-light.svg")
-                #light
+                .light
                     display: block
                     margin-left: 10px
-                #dark
+                .dark
                     display: none
                 ul
                     position: relative
@@ -243,25 +243,36 @@ body
     .platform
         margin-top: 7em
         @media (min-width: 875px)
-
-            .info
-                margin-left: 10%
-                > div:first-child
-                    margin-bottom: 70px
-            .img
-                width: 200%
-                img
-                    position: absolute
-                    width: 60%
-                    top: 740px
-            > div
-                display: flex
-                flex-direction: row-reverse
-            h3
-                font-size: 2.6em
-            h4, p
-                text-align: left
-                margin-left: 0
+            min-height: 900px
+            background:
+                    image: url("../img/illustration-editor-mobile.svg")
+                    repeat: no-repeat
+                    size: 55%
+                    position: 120% center
+            .container
+                min-height: 900px 
+                width: 85%
+                margin: auto
+                > div
+                    display: flex
+                    flex-direction: row-reverse
+                    min-height: 700px
+                    .img, .info
+                        flex: 1
+                    .img 
+                        img
+                            display: none
+                            height: fit-content
+                    .info 
+                        margin: auto
+                        > div:first-child
+                            margin-bottom: 70px
+                h3
+                    font-size: 2.6em
+                    margin: 0
+                h4, p
+                    text-align: left
+                    margin-left: 0
 
         
         
@@ -277,15 +288,16 @@ body
         border-radius: 0 80px 0 80px
         padding-top: 50%
         padding-bottom: 25%
-        margin-top: 60%
+        margin-top: 40%
         @media (min-width: 750px)
-            margin-top: 20%
             padding: 0
             position: relative
+            margin-top: 0
             > .fakestructure
                 display: flex
                 justify-content: center
-                padding: 6em 0 
+                padding: 6em 0  
+                margin: 0 10%
                 > div
                     flex: 1
         h2, p
@@ -308,29 +320,35 @@ body
                 position: absolute
                 width: 40%
                 margin-left: 0
-            
+    
     .free
-        margin-top: 15%
-        margin-right: 5%
-        margin-bottom: 25%
         @media (min-width: 875px)
-            display: flex
-            margin-bottom: 15%
-            .img
-                position: relative
-                width: 200%
-                
-                img
-                    position: absolute
-                    width: 140%
-                    left: -250px
-                    top: -120px
-            .info
-                > div:first-child
-                    margin-bottom: 70px
-                h4, p
-                    text-align: left
-                    margin-left: 0
+            background:
+                    image: url(../img/illustration-laptop-mobile.svg)
+                    repeat: no-repeat
+                    size: 60%
+                    position: -35% center
+            min-height: 900px
+            .container
+                width: 85%
+                min-height: 900px
+                margin: auto
+                display: flex
+                .img, .info
+                        flex: 1
+                        height: fit-content
+                        
+                .img
+                    img
+                        display: none
+                .info
+                    display: block
+                    margin: auto
+                    > div:first-child
+                        margin-bottom: 70px
+                    h4, p
+                        text-align: left
+                        margin-left: 0
 
 
 
@@ -341,16 +359,20 @@ body
         color: $txt-color
         padding: 1.6em
         padding-bottom: 4.6em
+        margin-top: 10%
         .logo-footer
             width: 30%
-            margin: auto
             padding: 1.6em 0
+            > li
+                margin: 0 auto
+                width: 30%
         a
             color: white
             &:hover
                 text-decoration: underline 
         @media (min-width: 875px)
             display: flex
+            margin-top: 0
             > ul
                 display: flex
                 flex: 1
@@ -362,7 +384,6 @@ body
                 padding-right: 50px
                 img
                     margin: 0 auto
-                    width: 30%
 
     .attribution
         background-color: $footer-bg

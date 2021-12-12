@@ -12,6 +12,9 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu&subset=Latin">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass&subset=Latin">
   <script>
+
+    var lastSection
+
     function openMenu(){
 
       var x = document.getElementById("menu")
@@ -27,11 +30,13 @@
     }
 
     function openAccordion(section){
+      
       var currentSection = document.getElementById(section)
 
       var subMenu = currentSection.children[1]
       
       if(subMenu.classList.contains("sub-menu-open")){
+          lastSection = undefined
           subMenu.classList.remove("sub-menu-open")
           currentSection.children[0].classList.remove("rotate")
           setTimeout(function () {
@@ -47,6 +52,20 @@
           }, 20);
          
         }
+        
+      if(lastSection != undefined){
+        closeLastSection(lastSection)
+      }
+        
+      lastSection = currentSection
+
+    }
+
+    function closeLastSection(lastSection){
+      var subMenuLastSection = lastSection.children[1]
+
+      subMenuLastSection.classList.remove("sub-menu-open")
+      lastSection.children[0].classList.remove("rotate")
     }
   </script>
   <title>Frontend Mentor | [Blogr]</title>
@@ -61,7 +80,7 @@
         <div id="menu">
           <div class="section">
           <ul id="Product">
-            <li ><a href="#" onclick="openAccordion('Product')">Product<img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <li ><a href="#" onclick="openAccordion('Product')">Product<img class="dark" src="img/icon-arrow-dark.svg" alt="dark arrow"/><img class="light" src="img/icon-arrow-light.svg" alt="light arrow"/></a></li>
             <ul>
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
@@ -72,7 +91,7 @@
           </ul>
 
           <ul id="Company">
-            <li><a href="#" onclick="openAccordion('Company')">Company<img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <li><a href="#" onclick="openAccordion('Company')">Company<img class="dark" src="img/icon-arrow-dark.svg" alt="dark arrow"/><img class="light" src="img/icon-arrow-light.svg" alt="light arrow"/></a></li>
             <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
@@ -82,7 +101,7 @@
           </ul>
 
           <ul id="Connect">
-            <li><a href="#" onclick="openAccordion('Connect')">Connect <img id="dark" src="img/icon-arrow-dark.svg"/><img id="light" src="img/icon-arrow-light.svg"/></a></li>
+            <li><a href="#" onclick="openAccordion('Connect')">Connect <img class="dark" src="img/icon-arrow-dark.svg"/><img class="light" src="img/icon-arrow-light.svg"/></a></li>
             <ul>
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
@@ -111,30 +130,31 @@
     </div>
   </header>
 
-  <div class="platform">
-    <h3>Designed for the future</h3>
-    <div>
-      <div class="img">
-        <img src="./img/illustration-editor-mobile.svg" alt="illustration editor mobile">
-      </div>
-      <div class="info">
-          <div>
-            <h4>Introducing an extensible editor</h4>
-            <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-              change the looks of a blog.</p>
-          </div>
+  <section class="platform">
+    <div class="container">
+      <h3>Designed for the future</h3>
+      <div>
+        <div class="img">
+          <img src="./img/illustration-editor-mobile.svg" alt="illustration editor mobile">
+        </div>
+        <div class="info">
+            <div>
+              <h4>Introducing an extensible editor</h4>
+              <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.</p>
+            </div>
 
-          <div>
-            <h4>Robust content management</h4>
-            <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
-              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
-          </div>
+            <div>
+              <h4>Robust content management</h4>
+              <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
+                by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+            </div>
+        </div>
       </div>
     </div>
-  </div>
-
+  </section>
     
     <div class="infrastructure">
       <div class="fakestructure">
@@ -148,10 +168,10 @@
         </div>
       </div>
     </div>
-
-    <div class="free">
+<section class="free">
+    <div class="container">
       <div class="img">
-        <img src="./img/illustration-laptop-mobile.svg" alt="">
+        <img src="./img/illustration-laptop-mobile.svg" alt="monile laptop">
       </div>
       <div class="info">
         <div>
@@ -169,14 +189,14 @@
         </div>
       </div>
     </div>
-
+</section>
   </div>
 
 
   <footer>
 
     <ul class="logo-footer">
-      <img src="img/logo.svg" alt="logo Blogr" />
+      <li><img src="img/logo.svg" alt="logo Blogr" /></li>
     </ul>
       <ul>
         <li><a href="#">Product</a></li>

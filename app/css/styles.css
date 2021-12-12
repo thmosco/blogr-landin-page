@@ -19,11 +19,6 @@ h4 {
   margin-bottom: 0;
 }
 
-p {
-  text-align: center;
-  font-size: 1.2em;
-}
-
 a {
   color: none;
   text-decoration: none;
@@ -56,10 +51,12 @@ img {
 p {
   font-family: Overpass;
   font-weight: 300;
+  text-align: center;
+  font-size: 1.2em;
   color: #4b5862;
   margin: 1.2em 2.4em;
   font-size: 1em;
-  line-height: 28px;
+  line-height: 36px;
 }
 
 .rotate img {
@@ -76,6 +73,8 @@ body {
   font-size: 16px;
   margin: 0;
   overflow-x: hidden;
+  max-width: 1600px;
+  margin: auto;
 }
 body header {
   color: white;
@@ -123,10 +122,10 @@ body header #menu img {
   margin-left: 5px;
   content: url("../img/icon-arrow-dark.svg");
 }
-body header #menu #light {
+body header #menu .light {
   display: none;
 }
-body header #menu #dark {
+body header #menu .dark {
   display: block;
 }
 body header #menu a {
@@ -181,11 +180,11 @@ body header #menu .connexion #sign-up:hover {
   body header #menu img {
     content: url("../img/icon-arrow-light.svg");
   }
-  body header #menu #light {
+  body header #menu .light {
     display: block;
     margin-left: 10px;
   }
-  body header #menu #dark {
+  body header #menu .dark {
     display: none;
   }
   body header #menu ul {
@@ -287,28 +286,41 @@ body .platform {
   margin-top: 7em;
 }
 @media (min-width: 875px) {
-  body .platform .info {
-    margin-left: 10%;
+  body .platform {
+    min-height: 900px;
+    background-image: url("../img/illustration-editor-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: 120% center;
   }
-  body .platform .info > div:first-child {
-    margin-bottom: 70px;
+  body .platform .container {
+    min-height: 900px;
+    width: 85%;
+    margin: auto;
   }
-  body .platform .img {
-    width: 200%;
-  }
-  body .platform .img img {
-    position: absolute;
-    width: 60%;
-    top: 740px;
-  }
-  body .platform > div {
+  body .platform .container > div {
     display: flex;
     flex-direction: row-reverse;
+    min-height: 700px;
   }
-  body .platform h3 {
+  body .platform .container > div .img, body .platform .container > div .info {
+    flex: 1;
+  }
+  body .platform .container > div .img img {
+    display: none;
+    height: fit-content;
+  }
+  body .platform .container > div .info {
+    margin: auto;
+  }
+  body .platform .container > div .info > div:first-child {
+    margin-bottom: 70px;
+  }
+  body .platform .container h3 {
     font-size: 2.6em;
+    margin: 0;
   }
-  body .platform h4, body .platform p {
+  body .platform .container h4, body .platform .container p {
     text-align: left;
     margin-left: 0;
   }
@@ -324,18 +336,19 @@ body .infrastructure {
   border-radius: 0 80px 0 80px;
   padding-top: 50%;
   padding-bottom: 25%;
-  margin-top: 60%;
+  margin-top: 40%;
 }
 @media (min-width: 750px) {
   body .infrastructure {
-    margin-top: 20%;
     padding: 0;
     position: relative;
+    margin-top: 0;
   }
   body .infrastructure > .fakestructure {
     display: flex;
     justify-content: center;
     padding: 6em 0;
+    margin: 0 10%;
   }
   body .infrastructure > .fakestructure > div {
     flex: 1;
@@ -372,30 +385,35 @@ body .infrastructure img {
     margin-left: 0;
   }
 }
-body .free {
-  margin-top: 15%;
-  margin-right: 5%;
-  margin-bottom: 25%;
-}
 @media (min-width: 875px) {
   body .free {
+    background-image: url(../img/illustration-laptop-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: -35% center;
+    min-height: 900px;
+  }
+  body .free .container {
+    width: 85%;
+    min-height: 900px;
+    margin: auto;
     display: flex;
-    margin-bottom: 15%;
   }
-  body .free .img {
-    position: relative;
-    width: 200%;
+  body .free .container .img, body .free .container .info {
+    flex: 1;
+    height: fit-content;
   }
-  body .free .img img {
-    position: absolute;
-    width: 140%;
-    left: -250px;
-    top: -120px;
+  body .free .container .img img {
+    display: none;
   }
-  body .free .info > div:first-child {
+  body .free .container .info {
+    display: block;
+    margin: auto;
+  }
+  body .free .container .info > div:first-child {
     margin-bottom: 70px;
   }
-  body .free .info h4, body .free .info p {
+  body .free .container .info h4, body .free .container .info p {
     text-align: left;
     margin-left: 0;
   }
@@ -407,11 +425,15 @@ body footer {
   color: white;
   padding: 1.6em;
   padding-bottom: 4.6em;
+  margin-top: 10%;
 }
 body footer .logo-footer {
   width: 30%;
-  margin: auto;
   padding: 1.6em 0;
+}
+body footer .logo-footer > li {
+  margin: 0 auto;
+  width: 30%;
 }
 body footer a {
   color: white;
@@ -422,6 +444,7 @@ body footer a:hover {
 @media (min-width: 875px) {
   body footer {
     display: flex;
+    margin-top: 0;
   }
   body footer > ul {
     display: flex;
@@ -437,7 +460,6 @@ body footer a:hover {
   }
   body footer .logo-footer img {
     margin: 0 auto;
-    width: 30%;
   }
 }
 body .attribution {
